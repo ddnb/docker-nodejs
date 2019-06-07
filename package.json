@@ -1,0 +1,9 @@
+{
+  "name": "docker-nodejs",
+  "version": "1.0.0",
+  "description": "Docker node.js app",
+  "main": "index.js",
+  "repository": "git@github.com:ddnb/docker-nodejs.git",
+  "author": "admin@diendannhatban.info",
+  "license": "MIT"
+}
