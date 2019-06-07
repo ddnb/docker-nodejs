@@ -2,7 +2,7 @@
 
 readonly MAINTAINER="admin@diendannhatban.info"
 readonly NAME="docker-nodejs"
-readonly DOCKER_IMAGE_NAME="docker-nodejs"
+readonly DOCKER_IMAGE_NAME="ddnb-nodejs"
 readonly LOCALHOST="127.0.0.1"
 
 helps() {
@@ -73,7 +73,7 @@ logs() {
 run_ssh() {
 	case $1 in
 		*)
-			docker-compose exec ${NAME} /bin/bash 
+			docker-compose exec  -u root ${DOCKER_IMAGE_NAME} /bin/bash 
 		;;
 	esac
 }
@@ -88,12 +88,12 @@ run_cli() {
 
 	case $1 in
 		*) 
-		  docker-compose exec -T ${NAME} /bin/bash -c \
+		  docker-compose exec -T ${DOCKER_IMAGE_NAME} /bin/bash -c \
 			  " \
-				${1} ${2} ${3} ${4} ${5} ${6} ${7} ${8} ${9} ${10} \
-				${11} ${12} ${13} ${14} ${15} ${16} ${17} ${18} ${19} ${20} \
-		    ${21} ${22} ${23} ${24} ${25} ${26} ${27} ${28} ${29} ${30} \
-		    ${31} ${32} ${33} ${34} ${35} ${36} ${37} ${38} ${39} ${40}
+          ${2} ${3} ${4} ${5} ${6} ${7} ${8} ${9} ${10} \
+          ${11} ${12} ${13} ${14} ${15} ${16} ${17} ${18} ${19} ${20} \
+          ${21} ${22} ${23} ${24} ${25} ${26} ${27} ${28} ${29} ${30} \
+          ${31} ${32} ${33} ${34} ${35} ${36} ${37} ${38} ${39} ${40}
 				"
 		;;
 	esac
